@@ -20,7 +20,10 @@ npm run setup
 ```js
 const { LunarProtoUtils } = require('lunar-apollo-protobuf-utils');
 
-/** @type {Buffer} Buffer containing a full lunarclient.apollo message, IE the data in a plugin packet with the channel `lunar:apollo` */
+/** 
+ * @type {Buffer} Buffer containing a full lunarclient.apollo message
+ * IE the data in a plugin packet with the channel `lunar:apollo`
+ */
 const buffer = null;
 
 /** May throw if the buffer is not a valid message or is not structured correctly */
@@ -44,7 +47,10 @@ if(decoded['@name'] === 'PlayerHandshakeMessage') {
 ```ts
 import { LunarProtoUtils } from 'lunar-apollo-protobuf-utils'; 
 
-/** Buffer containing a full lunarclient.apollo message, IE the data in a plugin packet with the channel `lunar:apollo` */
+/** 
+ * Buffer containing a full lunarclient.apollo message
+ * IE the data in a plugin packet with the channel `lunar:apollo`
+ */
 const buffer: Buffer = null;
 
 /** May throw if the buffer is not a valid message or is not structured correctly */
