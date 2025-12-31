@@ -18,7 +18,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { decodeProto } from "./protobuf-decoder/protobufDecoder";
 import { Writer } from "protobufjs/minimal";
-import { PROTO_BUNDLE_FILE_PATH as DEFAULT_PROTO_BUNDLE_FILE_PATH } from "./scripts/setup";
+import { PROTO_BUNDLE_FILE_PATH as DEFAULT_PROTO_BUNDLE_FILE_PATH } from "./basePaths.ts";
 import type { LunarProtoMessage, LunarProtoMessageName, LunarProtoTypeClass, LunarProtoMessageClassByName, LunarProtoTypeClassExports, LunarProtoTypeClassName } from "../ProtoTypes.d.ts";
 export type * from "../ProtoTypes.d.ts";
 

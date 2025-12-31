@@ -1,7 +1,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import { PROTO_FILES_DIR_PATH, LUNAR_REPO_PATH } from "./setup";
+import { PROTO_FILES_DIR_PATH, LUNAR_REPO_PATH } from "../basePaths";
 
 if(require.main === module) {
     main();   

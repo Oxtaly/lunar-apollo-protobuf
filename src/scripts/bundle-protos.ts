@@ -1,7 +1,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import { SELF_MODULE_BASE_DIR, PROTO_FILES_DIR_PATH, PROTO_BUNDLE_FILE_PATH } from "./setup";
+import { SELF_MODULE_BASE_DIR, PROTO_FILES_DIR_PATH, PROTO_BUNDLE_FILE_PATH } from "../basePaths";
 import { pbjs, pbts } from "protobufjs-cli"
 
 if(require.main === module) {

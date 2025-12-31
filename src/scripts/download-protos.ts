@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { execSync } from "node:child_process";
-import { LUNAR_REPO_PATH, PROTO_FILES_DIR_PATH } from "./setup";
+import { LUNAR_REPO_PATH, PROTO_FILES_DIR_PATH } from "../basePaths";
 
 if(require.main === module) {
     main();   
