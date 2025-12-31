@@ -1,5 +1,5 @@
 {
-    "name": "lunar-apollo-protobuf-utils",
+    "name": "lunar-apollo-protobuf",
     "version": "1.0.0",
     "main": "./dist/index.js",
     "scripts": {
@@ -21,8 +21,8 @@
         "protobufjs-cli": "^2.0.0",
         "typescript": "^5.9.3"
     },
-    "homepage": "https://github.com/Oxtaly/lunar-apollo-protobuf-utils",
-    "repository": "git+https://github.com/Oxtaly/lunar-apollo-protobuf-utils.git",
+    "homepage": "https://github.com/Oxtaly/lunar-apollo-protobuf",
+    "repository": "git+https://github.com/Oxtaly/lunar-apollo-protobuf.git",
     "dependencies": {
         "protobufjs": "^8.0.0",
         "tslib": "^2.8.1"

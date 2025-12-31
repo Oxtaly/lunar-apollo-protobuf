@@ -1,12 +1,12 @@
-# lunar-apollo-protobuf-utils
+# lunar-apollo-protobuf
 
 ## Node.js based protobuf encoder/decoder using protobufjs
 
 ## Installation
 
 ```bash
-git clone https://github.com/Oxtaly/lunar-apollo-protobuf-utils.git
-cd ./lunar-apollo-protobuf-utils
+git clone https://github.com/Oxtaly/lunar-apollo-protobuf.git
+cd ./lunar-apollo-protobuf
 npm i
 npx tsc
 ```
@@ -22,9 +22,9 @@ npm run setup
 ### Then, you can just import it as you would in any project like so:
 ```js
 // in CommonJS
-const { LunarProtoUtils } = require('lunar-apollo-protobuf-utils');
+const { LunarProtoUtils } = require('lunar-apollo-protobuf');
 // or in ESM
-import { LunarProtoUtils } from 'lunar-apollo-protobuf-utils'; 
+import { LunarProtoUtils } from 'lunar-apollo-protobuf'; 
 
 /** 
  * @type {Buffer} Buffer containing a full lunarclient.apollo message
@@ -44,14 +44,14 @@ if(decoded['@name'] === 'PlayerHandshakeMessage') {
         teamMaxSize: 1,
         teamCurrentSize: 1
     });
-    message.mapName = "Package/lunar-apollo-protobuf-utils";
+    message.mapName = "Package/lunar-apollo-protobuf";
     /** Fake function accepting a buffer to send to the client using the `lunar:apollo` channel */
     sendLunarApolloMessageToClient(LunarProtoUtils.encodeMessage(message));
 }
 ```
 ...or in typescript
 ```ts
-import { LunarProtoUtils } from 'lunar-apollo-protobuf-utils'; 
+import { LunarProtoUtils } from 'lunar-apollo-protobuf'; 
 
 /** 
  * Buffer containing a full lunarclient.apollo message
@@ -71,7 +71,7 @@ if(decoded['@name'] === 'PlayerHandshakeMessage') {
         teamMaxSize: 1,
         teamCurrentSize: 1
     });
-    message.mapName = "Package/lunar-apollo-protobuf-utils";
+    message.mapName = "Package/lunar-apollo-protobuf";
     /** Fake function accepting a buffer to send to the client using the `lunar:apollo` channel */
     sendLunarApolloMessageToClient(LunarProtoUtils.encodeMessage(message));
 };
@@ -82,8 +82,8 @@ if(decoded['@name'] === 'PlayerHandshakeMessage') {
 ### There are two main ways of using this library to create/verify the same message, consider this:
 
 ```ts
-import type { LunarProtoMessage, LunarProtoMessageClassByName } from "lunar-apollo-protobuf-utils";
-import { LunarProtoUtils } from "lunar-apollo-protobuf-utils";
+import type { LunarProtoMessage, LunarProtoMessageClassByName } from "lunar-apollo-protobuf";
+import { LunarProtoUtils } from "lunar-apollo-protobuf";
 
 // Just calling `LunarProtoMessage.lookupType(message['@name'])` would do the same
 // thing in this specific case but this is to demonstrate using the exported types
@@ -113,14 +113,14 @@ if(errorMessage) {
 ```
 ...or in CommonJS using jsdoc:
 ```js
-const { LunarProtoUtils } = require("lunar-apollo-protobuf-utils");
+const { LunarProtoUtils } = require("lunar-apollo-protobuf");
 
 /**
- * @typedef {import('lunar-apollo-protobuf-utils').LunarProtoMessage} LunarProtoMessage
+ * @typedef {import('lunar-apollo-protobuf').LunarProtoMessage} LunarProtoMessage
 */
 /**
- * @template {import("lunar-apollo-protobuf-utils").LunarProtoMessageName} T
- * @typedef {import('lunar-apollo-protobuf-utils').LunarProtoMessageClassByName<T>} LunarProtoMessageClassByName
+ * @template {import("lunar-apollo-protobuf").LunarProtoMessageName} T
+ * @typedef {import('lunar-apollo-protobuf').LunarProtoMessageClassByName<T>} LunarProtoMessageClassByName
  */
 
 /**

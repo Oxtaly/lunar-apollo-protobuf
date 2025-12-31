@@ -1,4 +1,4 @@
-// lunar-apollo-protobuf-utils
+// lunar-apollo-protobuf
 // Copyright (C) 2025  Oxtaly
 
 // // This program is free software: you can redistribute it and/or modify
@@ -47,7 +47,7 @@ Object.keys(apollo).forEach((moduleName) => {
         const fullType = `lunarclient.apollo.${moduleName}.v1.${key}`;
         
         if(AvailableLunarTypeClassNames.includes(key as typeof AvailableLunarTypeClassNames[number])) {
-            if(!process.env?.['SILENCE_lunar-apollo-protobuf-utils'])
+            if(!process.env?.['SILENCE_lunar-apollo-protobuf'])
                 console.warn(`${logStr} Type Class ${key} is duplicated, unexpected behavior may happen when looking up types/messages!`);
         } else {
             AvailableLunarTypeClassNames.push(key as typeof AvailableLunarTypeClassNames[number]);
